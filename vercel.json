@@ -1,0 +1,10 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/chat.js": { "maxDuration": 60, "includeFiles": "data/corpus.json" },
+    "api/status.js": { "maxDuration": 10 }
+  },
+  "rewrites": [{ "source": "/((?!api/|assets/|favicon).*)", "destination": "/index.html" }]
+}
